@@ -6,16 +6,15 @@ let isPlaying = false;
 
 function playSong() {
   isPlaying = true;
-  playButton.classList.replace("fa-play-circle", "fa-pause-circle");
+  playButton.classList.replace("fa-play", "fa-pause");
   playButton.setAttribute("title", "Pause");
   audioElement.play();
 }
 
 function pauseSong() {
   isPlaying = false;
-  playButton.classList.replace("fa-pause-circle", "fa-play-circle");
+  playButton.classList.replace("fa-pause", "fa-play");
   playButton.setAttribute("title", "Play");
-
   audioElement.pause();
 }
 
