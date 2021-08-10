@@ -67,14 +67,14 @@ h3 {
   background: #242323;
   border-radius: 5px;
   height: 100%;
-  /* change this to show progress */
   width: 66%;
   transition: width 0.1s linear;
+  top: -100px;
 }
 
 .duration-wrapper {
   position: relative;
-  top: -25px;
+  top: -5vh;
   display: flex;
   justify-content: space-between;
 }
@@ -82,15 +82,21 @@ h3 {
 /* Controls */
 .player-controls {
   position: relative;
-  top: -15px;
-  left: 120px;
-  width: 200px;
+  top: -7vh;
+  left: 22vw;
+  width: 40vw;
 }
 
 .fas {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.fas:hover {
+  filter: brightness(90%);
 }
 
 .main-button {
