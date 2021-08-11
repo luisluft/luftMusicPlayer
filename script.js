@@ -111,3 +111,4 @@ previousButton.addEventListener("click", previousSong);
 nextButton.addEventListener("click", nextSong);
 audioElement.addEventListener("timeupdate", updateProgressBar);
 progressContainer.addEventListener("click", setProgressBar);
+audioElement.addEventListener("ended", nextSong);
