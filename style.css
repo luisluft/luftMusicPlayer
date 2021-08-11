@@ -33,7 +33,7 @@ body {
 }
 
 .img-container img {
-  height: 100%;
+  height: 90%;
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
@@ -58,8 +58,9 @@ h3 {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 40px 20px;
+  margin: 1vh 10vw;
   height: 4px;
+  bottom: 100px;
 }
 
 .progress {
@@ -68,7 +69,6 @@ h3 {
   height: 100%;
   width: 66%;
   transition: width 0.1s linear;
-  top: -100px;
 }
 
 .duration-wrapper {
@@ -80,10 +80,11 @@ h3 {
 
 /* Controls */
 .player-controls {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
   position: relative;
-  top: -7vh;
-  left: 22vw;
-  width: 40vw;
 }
 
 .fas {
