@@ -17,8 +17,8 @@ body {
 }
 
 .player-container {
-  height: 80vh;
-  width: 60vw;
+  height: 500px;
+  width: 400px;
   background: #e0e5e9;
   border-radius: 20px;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
@@ -27,17 +27,22 @@ body {
 .img-container {
   position: relative;
   top: 1vh;
-  left: 6vw;
+  left: 5vw;
   height: 80%;
   width: 80%;
 }
 
 .img-container img {
-  height: 90%;
+  height: 80%;
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.title-container {
+  top: -60px;
+  position: relative;
 }
 
 h2 {
@@ -58,9 +63,11 @@ h3 {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 1vh 10vw;
+  margin: 10px 10px;
   height: 4px;
-  bottom: 100px;
+  width: 90%;
+  top: -50px;
+  position: relative;
 }
 
 .progress {
@@ -80,11 +87,10 @@ h3 {
 
 /* Controls */
 .player-controls {
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  padding: 10px;
   position: relative;
+  top: -40px;
+  left: 120px;
+  width: 200px;
 }
 
 .fas {
@@ -124,7 +130,7 @@ h3 {
   }
 
   .player-controls {
-    top: -10px;
-    left: 100px;
+    top: -45px;
+    left: 85px;
   }
 }
