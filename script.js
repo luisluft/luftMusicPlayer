@@ -40,7 +40,6 @@ function playSong() {
   playButton.classList.replace("fa-play", "fa-pause");
   playButton.setAttribute("title", "Pause");
   audioElement.play();
-  console.log(songIndex);
 }
 
 function pauseSong() {
@@ -84,13 +83,13 @@ function updateProgressBar(event) {
   }
 }
 
-// Event listeners
-playButton.addEventListener("click", () => {
-  isPlaying ? pauseSong() : playSong();
-});
-previousButton.addEventListener("click", previousSong);
-nextButton.addEventListener("click", nextSong);
-audioElement.addEventListener("timeupdate", updateProgressBar);
+function setProgressBar(event) {
+  console.log(event);
+  const totalWidth = this.clientWidth;
+  const clickedWidth = event.offsetX;
+  const { duration } = audioElement;
+  audioElement.currentTime = (clickedWidth / totalWidth) * duration;
+}
 
 // Update DOM
 function loadSong(songIndex) {
@@ -103,3 +102,12 @@ function loadSong(songIndex) {
 
 // On load select the first song
 loadSong(songIndex);
+
+// Event listeners
+playButton.addEventListener("click", () => {
+  isPlaying ? pauseSong() : playSong();
+});
+previousButton.addEventListener("click", previousSong);
+nextButton.addEventListener("click", nextSong);
+audioElement.addEventListener("timeupdate", updateProgressBar);
+progressContainer.addEventListener("click", setProgressBar);
